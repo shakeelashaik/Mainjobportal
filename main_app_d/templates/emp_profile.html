@@ -17,6 +17,7 @@
 <!--    <link href="assets/plugins/bootstrap/css/bootsnav.css" rel="stylesheet">-->
 <!--    <link href="assets/plugins/icons/css/icons.css" rel="stylesheet">-->
 <!--    <link href="assets/plugins/animate/animate.css" rel="stylesheet">	-->
+<!--    &lt;!&ndash; <link href="assets/css/jobstyle.css" rel="stylesheet"> &ndash;&gt;-->
 <!--    <link href="assets/css/style.css" rel="stylesheet">-->
 <!--	<link href="assets/css/responsiveness.css" rel="stylesheet">-->
 <!--	<link rel="stylesheet" href="assets/plugins/nice-select/css/nice-select.css">	-->
@@ -24,18 +25,26 @@
 <!--    <link href="assets/plugins/aos-master/aos.css" rel="stylesheet">-->
 <!--	<link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap-wysihtml5.css">-->
 <!--    &lt;!&ndash; <link href="assets/css/skin/default.css" rel="stylesheet">  &ndash;&gt;-->
+<!--	<link href="assets/css/css/imgareaselect-default.css" rel="stylesheet">-->
+<!--	<link rel="stylesheet" href="assets/css/css/jquery.awesome-cropper.css">-->
 <!--    <style>-->
 <!--        body, section {-->
 <!--            background: #f1f1f1;-->
 <!--        }-->
-<!--		 @media only screen and (max-width: 600px) {-->
-
+<!--		.prop_prop {-->
+<!--    width: 100%;-->
+<!--    padding: 0px;-->
+<!--}-->
+<!--.panel-body {-->
+<!--    padding: 15px;-->
+<!--    padding-left: 31px;-->
+<!--}-->
 <!--    </style>-->
 <!--	-->
 <!--	</head>-->
 <!--	-->
 <!--	<body>-->
-<!--	<header class="wow fadeInDown" data-offset-top="197" data-spy="affix">-->
+<!--	  <header class="wow fadeInDown" data-offset-top="197" data-spy="affix">-->
 <!--  <div class="logo-wrapper"> -->
 <!--	  <div class="container-fluid">-->
 <!--    <div class="navbar-header">-->
@@ -57,7 +66,7 @@
 <!--    </form>-->
 <!--    </div>-->
 <!--    <div class="collapse navbar-collapse" id="myNavbar">-->
-<!--      <ul class="nav navbar-nav navbar-right hidden-xs">       -->
+<!--      <ul class="nav navbar-nav navbar-right hidden-xs">        -->
 <!--       <li class="btn-success"><a href="index2.html">For Employer </a></li>-->
 <!--	   <li><a href="create_resume.html"> Post resume</a></li>-->
 <!--	   <li class="profile"><a href="javascript:void(0)" data-toggle="modal" data-target="#signin">-->
@@ -70,7 +79,7 @@
 <!--          </ul>-->
 <!--        </li>-->
 <!--      </ul>-->
-<!--      <ul class="nav navbar-nav hidden-lg hidden-md hidden-sm">         -->
+<!--      <ul class="nav navbar-nav hidden-lg hidden-md hidden-sm">           -->
 <!--       <li class="btn-success"><a href="index2.html">For Employer </a></li>-->
 <!--	   <li><a href="create_resume.html"> Post resume</a></li>-->
 <!--	      <li class="profile"><a href="javascript:void(0)" data-toggle="modal" data-target="#signin">-->
@@ -88,14 +97,12 @@
 <!--    </div>-->
 <!--  </div>-->
 <!--</header>-->
-
-                            <div class="full_width propery_listing">
-                                <div class="container">
-                                    <div class="row">
-					<div class="col-md-3 col-sm-3">
-					<div id="sticky-anchor"></div>
+		<div class="full_width propery_listing">
+			<div class="container">
+				<div class="row">
+<div class="col-md-3 col-sm-3">
+<div id="sticky-anchor"></div>
 <div class="filter_sidebar filtersidebar_menu for_mob_filter sidebar">
-					
 <div class="text-center">
 <span class="photo_edit text-center">	
 <img src="{% static 'img/noimg.jpg' %}" class="img-responsive img-circle">
@@ -103,237 +110,176 @@
     <label for="file-input">
         <img src="https://goo.gl/pB9rpQ"/>
     </label>
-
     <input id="file-input" type="file"/>
 </div>
+<!-- <input id="sample_input" type="hidden" name="test[image]"> -->
 </span>	
 </div>
     <div class="div_welcome">
 <h3>Welcome sreekanth !!</h3>
 </div>
 <ul>
-    <li class=""><a href="{% url 'emppro' %}">My Profile</a></li>
+    <li class="active"><a href="{% url 'emppro' %}">My Profile</a></li>
     <li class=""><a href="{% url 'postedjobs' %}">Posted Jobs</a></li>
     <li class=""><a href="{% url 'jobappliers' %}">Job Appliers</a></li>
 	<li class=""><a href="{% url 'bookmarkpro' %}">Bookmarked Profiles</a></li>
-    <li class="active"><a href="{% url 'shortlistedprofiles' %}">Shortlisted Profiles</a></li>
+    <li class=""><a href="{% url 'shortlistedprofiles' %}">Shortlisted Profiles</a></li>
     <li class=""><a href="{% url 'conpro' %}">Contacted Profiles</a></li>
 <!--	<li class=""><a href="interested_jobs.html">Interested Jobs</a></li>-->
 <!--	<li class=""><a href="Contacted_com.html">Contacted Companies</a></li>-->
     <li class=""><a href="{% url 'empchangepass' %}">Change Password</a></li>
     <li class=""><a href="#">Logout</a></li>
 </ul>
-</div>
-						
+</div>						
 					</div>
 					<div class="col-md-9 liting_grid padding_10_right">
-					
-<!-- <div class="fl-left"> -->
-   <!-- <ul class="nav nav-tabs nav-tabss"> -->
-    <!-- <li class="active"><a data-toggle="tab" href="#home">pending</a></li> -->
-    <!-- <li><a data-toggle="tab" href="#menu1">Accept</a></li> -->
-    <!-- <li><a data-toggle="tab" href="#menu2">Declined</a></li> -->
-  <!-- </ul></div> -->
-  <div class="stuff">
-  <button class="button check-all check_uncheck">
-						<label><input type="checkbox" id="1" class="checkbox_design">Check all</label></button>
-						<button class="button uncheck-all check_uncheck">
-						<label><input type="checkbox" id="1" class="checkbox_design">Uncheck all</label></button>
-						<button class="button del_icon"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-					<form class="checkboxes">
-					<ul>
-					   <li>
-						<div class="job-verticle-list">
-							<div class="vertical-job-card">
-								<div class="vertical-job-body">
-									<div class="row">
-										<div class="col-md-12 col-sm-12">
-											<input type="checkbox" id="1" class="checkbox_design">
-											<ul class="can-skils cm_logo_emploer_mian">
-                                                <div class="vrt-job-cmp-logo cm_logo_emploer">
-                                                 <a href="job-detail.html">
-												 <img src="{% static 'img/female.jpg' %}" class="img-responsive" alt="">
-												 </a>
-                                                </div>
-												<li>
-                                                    <h5><a href="#" class="cm_logo_emploer_heading">Somnath Bhadra</a><span>ID:2587TH</span></h5>
-                                                    <p>Teacher from Berhampur, Murshidabad</p>
-                                                    <span class="no_margin_left"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Graduate - Btech/BE, Computers (Computers)
-                                                    </span>
-                                                    <span><i class="fa fa-briefcase" aria-hidden="true"></i> 2 yrs</span>
-                                                    
-                                                
-                                                    <span><i class="fa fa-inr" aria-hidden="true"></i> 5000 / month</span>
-                                                </li>
-												
-												
-											</ul>
-                                            
-                                            
-                                            <ul class="emplouer_detials">
-                                                <p>Interested in Full Time Jobs with Any Shift</p>
-                                                
-                                                <li>
-                                                    <span class="emp_heading">Photo ID Proof</span>
-                                                    <span class="emp_repe">Aadhaar Card, Ration Card</span>
-                                                </li>
-                                                
-                                              
-                                                
-                                                <li>
-                                                    <span class="emp_heading">Sub Type</span>
-                                                    <span class="emp_repe">Govt Institution</span>
-                                                </li>
-                                                <li>
-                                                    <span class="emp_heading">Languages known</span>
-                                                    <span class="emp_repe">Hindi, Bengali, English</span>
-                                                </li>
-                                                
-                                                <li>
-                                                    <span class="emp_heading">Preference Location</span>
-                                                    <span class="emp_repe">Hyderabad</span>
-                                                </li>
-                                                
-                                               
-                                                <li>
-                                                    <span class="emp_heading">Passport</span>
-                                                    <span class="emp_repe">No</span>
-                                                </li> 
-                                             
-                                                <li>
-                                                    <span class="emp_heading">Industry</span>
-                                                    <span class="emp_repe">Others</span>
-                                                </li>
-                                                
-                                                <li>
-                                                    <span class="emp_heading">Job Title </span>
-                                                    <span class="emp_repe">Security Officer</span>
-                                                </li>
-                                                <li>
-                                                    <span class="emp_heading"> Address Proof</span>
-                                                    <span class="emp_repe">Voter ID Card, Ration Card</span>
-                                                </li>
-                                            </ul>
-										</div>
-									</div>
-								</div>
-								<div class="vertical-job-footer ertical-job-footer2 vertical-job-footerq">
-									<div class="row">
-										<div class="col-md-6 col-sm-6 footer_emploer">
-											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">SMS</button></a>
-											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">Email</button></a>
-											<a href="#" class="btn btn-sm theme-btn"><img src="{% static 'img/resume.png' %}" class="resumeicon">Download resume</a>
-										</div>
-										<div class="col-md-6 col-sm-6">
-											<a href="{% url 'applier_profile' %}" class="btn btn-sm resume-theme-btn pull-right">View Contact</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="job-verticle-list">
-							<div class="vertical-job-card">
-								<div class="vertical-job-body">
-									<div class="row">
-										<div class="col-md-12 col-sm-12">
-											<input type="checkbox" id="1" class="checkbox_design">
-											<ul class="can-skils cm_logo_emploer_mian">
-                                                <div class="vrt-job-cmp-logo cm_logo_emploer">
-                                                 <a href="job-detail.html">
-												 <img src="{% static 'img/female.jpg' %}" class="img-responsive" alt="">
-												 </a>
-                                                </div>
-												<li>
-                                                    <h5><a href="#" class="cm_logo_emploer_heading">Somnath Bhadra</a><span>ID:2587TH</span></h5>
-                                                    <p>Teacher from Berhampur, Murshidabad</p>
-                                                    <span class="no_margin_left"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Graduate - Btech/BE, Computers (Computers)
-                                                    </span>
-                                                    <span><i class="fa fa-briefcase" aria-hidden="true"></i> 2 yrs</span>
-                                                    
-                                                
-                                                    <span><i class="fa fa-inr" aria-hidden="true"></i> 5000 / month</span>
-                                                </li>
-												
-												
-											</ul>
-                                            
-                                            
-                                            <ul class="emplouer_detials">
-                                                <p>Interested in Full Time Jobs with Any Shift</p>
-                                                
-                                                <li>
-                                                    <span class="emp_heading">Photo ID Proof</span>
-                                                    <span class="emp_repe">Aadhaar Card, Ration Card</span>
-                                                </li>
-                                                
-                                              
-                                                
-                                                <li>
-                                                    <span class="emp_heading">Sub Type</span>
-                                                    <span class="emp_repe">Govt Institution</span>
-                                                </li>
-                                                <li>
-                                                    <span class="emp_heading">Languages known</span>
-                                                    <span class="emp_repe">Hindi, Bengali, English</span>
-                                                </li>
-                                                
-                                                <li>
-                                                    <span class="emp_heading">Preference Location</span>
-                                                    <span class="emp_repe">Hyderabad</span>
-                                                </li>
-                                                
-                                               
-                                                <li>
-                                                    <span class="emp_heading">Passport</span>
-                                                    <span class="emp_repe">No</span>
-                                                </li> 
-                                             
-                                                <li>
-                                                    <span class="emp_heading">Industry</span>
-                                                    <span class="emp_repe">Others</span>
-                                                </li>
-                                                
-                                                <li>
-                                                    <span class="emp_heading">Job Title </span>
-                                                    <span class="emp_repe">Security Officer</span>
-                                                </li>
-                                                <li>
-                                                    <span class="emp_heading"> Address Proof</span>
-                                                    <span class="emp_repe">Voter ID Card, Ration Card</span>
-                                                </li>
-                                            </ul>
-										</div>
-									</div>
-								</div>
-								<div class="vertical-job-footer ertical-job-footer2 vertical-job-footerq">
-									<div class="row">
-										<div class="col-md-6 col-sm-6 footer_emploer">
-											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">SMS</button></a>
-											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">Email</button></a>
-											<a href="#" class="btn btn-sm theme-btn"><img src="{% static 'img/resume.png' %}" class="resumeicon">Download resume</a>
-										</div>
-										<div class="col-md-6 col-sm-6">
-											<a href="{% url 'applier_profile' %}" class="btn btn-sm resume-theme-btn pull-right">View Contact</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</form>
-  <ul class="pagination">
-  <li class="disabled"><a href="#">&laquo;</a></li>
-  <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">5</a></li>
-  <li><a href="#">&raquo;</a></li>
-</ul>
-					
+					<div class="row">
+					<div class="col-md-6"></div>
+<div class="col-md-6">
+	<div class="edit">
+	<a href="{% url 'empproedit' %}"><span class="glyphicon glyphicon-edit">	</span>	Edit</a>
+	</div>
+	</div>
+	</div>
+<div class="prop_prop" data-aos="fade-up" data-aos-duration="500">
+
+ <div class="panel panel-default">
+    <div class="panel-heading">
+    <div class="row">
+	
+	<div class="col-md-6">
+	<h4 class=" personal_details">Personal Details</h4>
+	</div>
+	<div class="col-md-6">
+	<div class="edit">
+	</div>
+	</div>
+	</div>
+	</div>
+    <div class="panel-body">	
+    <div class="row">	
+	 <div class="col-md-3">
+	 Name
+	</div>
+	 <div class="col-md-6">
+	 :  &nbsp;&nbsp;Vuppu Ravali
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3 ">
+	 Email 
+	</div>
+	 <div class="col-md-6">
+	 :  &nbsp;&nbsp;ravali@mhninformatics.com
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3 ">
+	 Contact No  
+	</div>
+	 <div class="col-md-6">
+	 :  &nbsp;&nbsp;9876543210
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3 ">
+	 Address line  
+	</div>
+	 <div class="col-md-6">
+	 :  &nbsp;&nbsp;9876543210
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3 ">
+	 City: 
+	</div>
+	 <div class="col-md-6">
+	 :  &nbsp;9876543210
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3 ">
+	 State 
+	</div>
+	 <div class="col-md-6">
+	 :  &nbsp;&nbsp;9876543210
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3 ">
+	 Country 
+	</div>
+	 <div class="col-md-6">
+	 :  &nbsp;9876543210
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3 ">
+	 Zip code 
+	</div>
+	 <div class="col-md-6">
+	 :  &nbsp;&nbsp;9876543210
+	</div>
+	</div>
+	</div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+    <div class="row">
+	
+	<div class="col-md-12">
+	<h4 class=" personal_details">  Social Accounts</h4>
+	</div>
+	</div>
+	</div>
+    <div class="panel-body">	
+    <div class="row">	
+	 <div class="col-md-4">
+	
+	 <label>
+	 <i class="fa fa-facebook"></i>   Facebook :
+	 </label>Facebook
+	</div>
+	 <div class="col-md-4">
+	 
+	 <label>
+	 <i class="fa fa-google"></i>   Google :
+	 </label>Google
+	</div>
+	 <div class="col-md-4">	  
+	 <label>
+	 <i class="fa fa-twitter"></i>  Twitter :
+	 </label>Twitter
+	</div>
+	</div>	
+    <div class="row">	
+	  <div class="col-md-4">
+	   
+	  <label>
+	 
+<i class="fa fa-linkedin"></i>  LinkedIn :
+	 </label>
+	 LinkedIn
+	</div>
+	 <div class="col-md-4">  
+	  <label>
+	 <i class="fa fa-pinterest"></i>  Pinterest :
+	 </label>
+	 Pinterest
+	</div>
+	 <div class="col-md-4">	  
+	  <label>
+	 
+	 <i class="fa fa-instagram"></i>  Instagram :
+	 </label>
+	 Instagram
+	</div>
+	</div>	
+	</div>
+	</div>
+  </div>
+</div>
+						
 </div>
 					
 					<!-- Sidebar -->
@@ -342,7 +288,6 @@
 				</div>
                                 </div>
                                 
-                            </div>
                             </div>
                             
 <!--		<footer class="footer">-->
@@ -438,6 +383,7 @@
 <!--      MHN Informatics Pvt Limited | All Rights Reserved.</p>-->
 <!--  </div>-->
 <!--</div>-->
+<!--		  -->
 <!--		&lt;!&ndash; Apply Job Popup &ndash;&gt;-->
 <!--		<div class="modal fade" id="apply-job" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">-->
 <!--			<div class="modal-dialog">-->
@@ -488,30 +434,9 @@
 <!--			</div>-->
 <!--		</div>   -->
 <!--		&lt;!&ndash; Apply Job Popup &ndash;&gt;-->
-<!--		&lt;!&ndash; sms Popup &ndash;&gt;-->
-<!--		<div class="modal fade" id="myModal" role="dialog">-->
-<!--    <div class="modal-dialog">-->
-<!--    -->
-<!--      &lt;!&ndash; Modal content&ndash;&gt;-->
-<!--      <div class="modal-content">-->
-<!--        <div class="modal-header">-->
-<!--          <button type="button" class="close" data-dismiss="modal">&times;</button>-->
-<!--          <h4 class="modal-title">Modal Header</h4>-->
-<!--        </div>-->
-<!--        <div class="modal-body">-->
-<!--          <p>Some text about sms in the modal.</p>-->
-<!--        </div>-->
-<!--        <div class="modal-footer">-->
-<!--          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      -->
-<!--    </div>-->
-<!--  </div>-->
-<!--		&lt;!&ndash; sms Popup &ndash;&gt;-->
 <!--		-->
 <!--		&lt;!&ndash; Sign Up Window Code &ndash;&gt;-->
-<!--	<div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">-->
+<!--		<div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">-->
 <!--			<div class="modal-dialog">-->
 <!--				<div class="modal-content" id="myModalLabel1">-->
 <!--					<div class="modal-body">-->
@@ -539,12 +464,12 @@
 <!--									-->
 <!--									<div class="form-group">-->
 <!--										<label>User Name</label>-->
-<!--										<input type="text" class="form-control" placeholder="User Name">-->
+<!--										<input type="text" class="form-control" placeholder="User Name" required>-->
 <!--									</div>-->
 <!--									-->
 <!--									<div class="form-group">-->
 <!--										<label>Password</label>-->
-<!--										<input type="password" class="form-control" placeholder="*********">-->
+<!--										<input type="password" class="form-control" placeholder="*********" required>-->
 <!--									</div>-->
 <!--									-->
 <!--									<div class="form-group">-->
@@ -580,20 +505,20 @@
 <!--									-->
 <!--									<div class="">-->
 <!--										&lt;!&ndash; <label>User Name</label> &ndash;&gt;-->
-<!--										<input type="text" class="form-control" placeholder="User Name">-->
+<!--										<input type="text" class="form-control" placeholder="User Name" required>-->
 <!--									</div>-->
 <!--									<div class="form-group">-->
 <!--										&lt;!&ndash; <label>last Name</label> &ndash;&gt;-->
-<!--										<input type="text" class="form-control" placeholder="last Name">-->
+<!--										<input type="text" class="form-control" placeholder="last Name" required>-->
 <!--									</div>-->
 <!--									<div class="form-group">-->
 <!--										&lt;!&ndash; <label>Email</label> &ndash;&gt;-->
-<!--										<input type="email" class="form-control" placeholder="Email">-->
+<!--										<input type="email" class="form-control" placeholder="Email" required>-->
 <!--									</div>-->
 <!--									-->
 <!--									<div class="form-group">-->
 <!--										&lt;!&ndash; <label>Password</label> &ndash;&gt;-->
-<!--										<input type="password" class="form-control" placeholder="*********">-->
+<!--										<input type="password" class="form-control" placeholder="*********" required>-->
 <!--									</div>-->
 <!--									-->
 <!--									<div class="form-group">-->
@@ -621,7 +546,7 @@
 <!--					</div>-->
 <!--				</div>-->
 <!--			</div>-->
-<!--		</div>   -->
+<!--		</div> -->
 <!--    -->
 <!--                      -->
 <!--		-->
@@ -639,6 +564,29 @@
 <!--		<script src="assets/plugins/date-dropper/datedropper.js"></script>-->
 <!--		<script src="assets/plugins/nice-select/js/jquery.nice-select.min.js"></script>-->
 <!--		<script src="assets/js/custom.js"></script>-->
+<!--		<script src="assets/js/js/jquery.imgareaselect.js"></script> -->
+<!--		<script src="assets/js/js/jquery.awesome-cropper.js"></script> -->
+<!--		<script>-->
+<!--    $(document).ready(function () {-->
+<!--        $('#sample_input').awesomeCropper(-->
+<!--        { width: 150, height: 150, debug: true }-->
+<!--        );-->
+<!--    });-->
+<!--	</script> -->
+<!--	<script type="text/javascript">-->
+
+<!--	  var _gaq = _gaq || [];-->
+<!--	  _gaq.push(['_setAccount', 'UA-36251023-1']);-->
+<!--	  _gaq.push(['_setDomainName', 'jqueryscript.net']);-->
+<!--	  _gaq.push(['_trackPageview']);-->
+
+<!--	  (function() {-->
+<!--		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;-->
+<!--		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';-->
+<!--		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);-->
+<!--	  })();-->
+
+<!--	</script>-->
 <!--		<script>-->
 <!--function sticky_relocate() {-->
 <!--			    var window_top = $(window).scrollTop() ;-->
@@ -666,16 +614,6 @@
 <!--			    sticky_relocate();-->
 <!--			});-->
 <!--</script>-->
-<!--		<script>-->
-<!--		$(function() {-->
-<!--			  $('.check-all').on('click', function() {-->
-<!--				$('.checkboxes input:checkbox').prop('checked', true);-->
-<!--			  });-->
-<!--			  $('.uncheck-all').on('click', function() {-->
-<!--				$('.checkboxes input:checkbox').prop('checked', false);-->
-<!--			  });-->
-<!--			});-->
-<!--		</script>-->
 <!--		<script>-->
 <!--		$('#myTab a').click(function (e) {-->
 <!--			e.preventDefault()-->
@@ -706,6 +644,7 @@
 <!--		<script>-->
 <!--			AOS.init();-->
 <!--		</script>-->
+<!--		-->
 <!--    </body>-->
 
 <!--</html>-->

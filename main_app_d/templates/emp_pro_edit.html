@@ -28,14 +28,12 @@
 <!--        body, section {-->
 <!--            background: #f1f1f1;-->
 <!--        }-->
-<!--		 @media only screen and (max-width: 600px) {-->
-
 <!--    </style>-->
 <!--	-->
 <!--	</head>-->
 <!--	-->
 <!--	<body>-->
-<!--	<header class="wow fadeInDown" data-offset-top="197" data-spy="affix">-->
+<!--	  <header class="wow fadeInDown" data-offset-top="197" data-spy="affix">-->
 <!--  <div class="logo-wrapper"> -->
 <!--	  <div class="container-fluid">-->
 <!--    <div class="navbar-header">-->
@@ -57,7 +55,7 @@
 <!--    </form>-->
 <!--    </div>-->
 <!--    <div class="collapse navbar-collapse" id="myNavbar">-->
-<!--      <ul class="nav navbar-nav navbar-right hidden-xs">       -->
+<!--      <ul class="nav navbar-nav navbar-right hidden-xs">        -->
 <!--       <li class="btn-success"><a href="index2.html">For Employer </a></li>-->
 <!--	   <li><a href="create_resume.html"> Post resume</a></li>-->
 <!--	   <li class="profile"><a href="javascript:void(0)" data-toggle="modal" data-target="#signin">-->
@@ -70,7 +68,7 @@
 <!--          </ul>-->
 <!--        </li>-->
 <!--      </ul>-->
-<!--      <ul class="nav navbar-nav hidden-lg hidden-md hidden-sm">         -->
+<!--      <ul class="nav navbar-nav hidden-lg hidden-md hidden-sm">           -->
 <!--       <li class="btn-success"><a href="index2.html">For Employer </a></li>-->
 <!--	   <li><a href="create_resume.html"> Post resume</a></li>-->
 <!--	      <li class="profile"><a href="javascript:void(0)" data-toggle="modal" data-target="#signin">-->
@@ -88,218 +86,182 @@
 <!--    </div>-->
 <!--  </div>-->
 <!--</header>-->
-
-		<div class="full_width propery_listing">
-			<div class="container">
-				<div class="row">
-<div class="col-md-3 col-sm-3">
-<div id="sticky-anchor"></div>
-<div class="filter_sidebar filtersidebar_menu for_mob_filter sidebar">
+                            <div class="full_width propery_listing">
+                                <div class="container">
+                                    <div class="row">
+					<div class="col-md-3 col-sm-3">
+					<div class="filter_sidebar filtersidebar_menu for_mob_filter">
 					
-<div class="text-center">
-<span class="photo_edit text-center">	
-<img src="{% static 'img/noimg.jpg' %}" class="img-responsive img-circle">
-<div class="image-upload">
-    <label for="file-input">
-        <img src="https://goo.gl/pB9rpQ"/>
-    </label>
+<div class="profileimg1 img-thumbnail">
+<br/>
+<img src="{%static 'img/noimg.jpg' %}" class="img-thumbnail img-circle img-responsive">
 
-    <input id="file-input" type="file"/>
-</div>
-</span>	
 </div>
     <div class="div_welcome">
-<h3>Welcome saipoojitha !!</h3>
+<h3>Welcome sreekanth !!</h3>
 </div>
 <ul>
-   <li class=""><a href="myprofile.html">My Profile</a></li>
-    <li class=""><a href="shortlisted_profiles.html">Shortlisted Profiles</a></li>
-    <li class=""><a href="sent_jobs.html">Sent Jobs</a></li>
-    <li class=""><a href="posted_jobs.html">Posted Jobs</a></li>
-    <li class="active"><a href="applied_jobs.html">Apply Jobs (110)</a></li>
-    <li class=""><a href="shortlisted_jobs.html">Shortlisted Jobs</a></li>
-    <li class=""><a href="changepassword.html">Change Password</a></li>
+    <li class="active"><a href="{% url 'emppro' %}">My Profile</a></li>
+    <li class=""><a href="{% url 'postedjobs' %}">Posted Jobs</a></li>
+    <li class=""><a href="{% url 'jobappliers' %}">Job Appliers</a></li>
+	<li class=""><a href="{% url 'bookmarkpro' %}">Bookmarked Profiles</a></li>
+    <li class=""><a href="{% url 'shortlistedprofiles' %}">Shortlisted Profiles</a></li>
+    <li class=""><a href="{% url 'conpro' %}">Contacted Profiles</a></li>
+<!--	<li class=""><a href="interested_jobs.html">Interested Jobs</a></li>-->
+<!--	<li class=""><a href="Contacted_com.html">Contacted Companies</a></li>-->
+    <li class=""><a href="{% url 'empchangepass' %}">Change Password</a></li>
     <li class=""><a href="#">Logout</a></li>
 </ul>
 </div>
 						
 					</div>
 					<div class="col-md-9 liting_grid padding_10_right">
+<div class="prop_prop" data-aos="fade-up" data-aos-duration="500">
+ <div class="panel panel-default">
+    <div class="panel-heading">
+    <div class="row">
 	
+	<div class="col-md-6">
+	<h4 class=" personal_details">Personal Details</h4>
+	</div>
+	<div class="col-md-6">
+	<div class="edit">
+	</div>
+	</div>
+	</div>
+	</div>
+    <div class="panel-body text-center pan_form_con">	
+    <div class="row">	
+	 <div class="col-md-3">
+	 Name 
+	</div>
+	 <div class="col-md-6">
+	 <input type="text" class="form-control" placeholder="...Vuppu Ravali" />
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3">
+	 Email 
+	</div>
+	 <div class="col-md-6">
+	 <input type="email" class="form-control" placeholder="...ravali@mhninformatics.com" />
+	 
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3">
+	 Contact No 
+	</div>
+	 <div class="col-md-6">
+	 <input type="number" class="form-control" placeholder="...9876543210" />
+	 
+	</div>
+	</div>
+	<div class="row">	
+	 <div class="col-md-3">
+	 City 
+	</div>
+	 <div class="col-md-6">
+	 
+	 <input type="number" class="form-control" placeholder="...9876543210" />
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3">
+	 State 
+	</div>
+	 <div class="col-md-6">
 	
-  <div class="stuff">
-							<!-- <div class="fl-right"> -->
-									<!-- <div class="search-wide"> -->
-										<!-- <button class="button del_icon"><i class="fa fa-trash-o" aria-hidden="true"></i></button> -->
-									<!-- </div> -->
-									
-									<!-- <div class="search-wide full"> -->
-
-									<!-- </div> -->
-								
-								<!-- </div> -->
-  
-  
-
-						<button class="button uncheck-all check_uncheck">
-						<label><input type="checkbox" id="1" class="checkbox_design">Uncheck all</label></button>
-						<button class="button check-all check_uncheck">
-						<label><input type="checkbox" id="1" class="checkbox_design">Check all</label></button>
-						<button class="button del_icon"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-					<form class="checkboxes">
-					<ul>
-					   <li>
-					<div class="job-verticle-list">
-							<div class="vertical-job-card">
-								<div class="vertical-job-header">
-									<h5>
-										<input type="checkbox" id="1" class="checkbox_design">
-										<span style="margin-bottom: 6px;display:inline-block;">Sr. Web Designer </span>
-									</h5>
-								</div>
-								<div class="vertical-job-body">
-									<div class="row">
-										<div class="col-md-9 col-sm-8">
-                                            
-											<ul class="can-skils">
-                                                <div class="vrt-job-cmp-logo">
-                                                 <a href="job-detail.html"><img src="{% static 'assets/img/c-1.png' %}" class="img-responsive" alt=""></a>
-                                                </div>
-												<li><h5><a href="#">Apple LTD</a></h5> <span style="margin-bottom: 6px;display: block;">Sr. Web Designer </span></li>
-												
-												<li><strong>Job Type: </strong>Full Time</li>
-												<li><strong>KeySkills: </strong>
-													<span class="skill-tag">Photoshop</span>
-													<span class="skill-tag">HTML</span>
-													<span class="skill-tag">css</span>
-													<span class="skill-tag">java</span>
-													<span class="skill-tag">php</span>
-													<span class="skill-tag">bootstrap</span>
-												</li>
-												<li><strong>Experience: </strong>3.5 Year</li>
-												<li><strong>Job Description: </strong> <span class="desc">Should be comfortable with individual contributor role;Good proficient in all design aspects;Graduate ...</span></li>
-												<li><strong>Location: </strong><span></span>Hyderabad - Ameerpet, A S Rao Nagar, Dilsukh Nagar, Madhapur</li>
-											</ul>
-										</div>
-										<div class="col-md-3 col-sm-4">
-											<div class="vrt-job-act">
-												<a href="#" class="btn btn-sm theme-btn">Apply Now</a>
-											</div>
-											<div class="vrt-job-act">
-												<a href="job_detail.html" title="" class="btn btn-sm view_jop">View Job</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="vertical-job-footer">
-									<div class="row">
-										<div class="col-md-6 col-sm-6">
-											<div class="cmp-job-rating">
-												<ul>
-                                                    <li><span class="fa fa-star-o" aria-hidden="true"></span></li>
-													<li><span class="fa fa-inr" aria-hidden="true"></span> 1,00,000 - 6,00,000 P.A.and Posted by 1month Ago</li>
-												</ul>
-											</div>
-										</div>
-										<div class="col-md-6 col-sm-6">
-											<div class="cmp-job-review">
-												<ul>
-													<li><a href="#" class="apply_job_mem">Applied by 60 members</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						</li>
-						 <li>
-					<div class="job-verticle-list">
-							<div class="vertical-job-card">
-								<div class="vertical-job-header">
-									<h5>
-										<input type="checkbox" id="1" class="checkbox_design">
-										<span style="margin-bottom: 6px;display:inline-block;">Sr. Web Designer </span>
-									</h5>
-								</div>
-								<div class="vertical-job-body">
-									<div class="row">
-										<div class="col-md-9 col-sm-8">
-                                            
-											<ul class="can-skils">
-                                                <div class="vrt-job-cmp-logo">
-                                                 <a href="job-detail.html"><img src="{% static 'assets/img/c-1.png' %}" class="img-responsive" alt=""></a>
-                                                </div>
-												<li><h5><a href="#">Apple LTD</a></h5> <span style="margin-bottom: 6px;display: block;">Sr. Web Designer </span></li>
-												
-												<li><strong>Job Type: </strong>Full Time</li>
-												<li><strong>KeySkills: </strong>
-													<span class="skill-tag">Photoshop</span>
-													<span class="skill-tag">HTML</span>
-													<span class="skill-tag">css</span>
-													<span class="skill-tag">java</span>
-													<span class="skill-tag">php</span>
-													<span class="skill-tag">bootstrap</span>
-												</li>
-												<li><strong>Experience: </strong>3.5 Year</li>
-												<li><strong>Job Description: </strong> <span class="desc">Should be comfortable with individual contributor role;Good proficient in all design aspects;Graduate ...</span></li>
-												<li><strong>Location: </strong><span></span>Hyderabad - Ameerpet, A S Rao Nagar, Dilsukh Nagar, Madhapur</li>
-											</ul>
-										</div>
-										<div class="col-md-3 col-sm-4">
-											<div class="vrt-job-act">
-												<a href="#" class="btn btn-sm theme-btn">Apply Now</a>
-											</div>
-											<div class="vrt-job-act">
-												<a href="job_detail.html" title="" class="btn btn-sm view_jop">View Job</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="vertical-job-footer">
-									<div class="row">
-										<div class="col-md-6 col-sm-6">
-											<div class="cmp-job-rating">
-												<ul>
-                                                    <li><span class="fa fa-star-o" aria-hidden="true"></span></li>
-													<li><span class="fa fa-inr" aria-hidden="true"></span> 1,00,000 - 6,00,000 P.A.and Posted by 1month Ago</li>
-												</ul>
-											</div>
-										</div>
-										<div class="col-md-6 col-sm-6">
-											<div class="cmp-job-review">
-												<ul>
-													<li><a href="#" class="apply_job_mem">Applied by 60 members</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						</li>
-						</ul>
-						</form>
-	
-  <ul class="pagination">
-  <li class="disabled"><a href="#">&laquo;</a></li>
-  <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">5</a></li>
-  <li><a href="#">&raquo;</a></li>
-</ul>
-   
-	  
-  
-  <!-- <div class="text-center"> -->
-							<!-- <button type="button" class="btn theme-btn btn-m">Load More...</button> -->
-							<!-- <br/> -->
-						<!-- </div> -->
+	 <input type="number" class="form-control" placeholder="...9876543210" />
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3">
+	 Country
+	</div>
+	 <div class="col-md-6">
+	 <input type="number" class="form-control" placeholder="...9876543210" />
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3">
+	 Zip code 
+	</div>
+	 <div class="col-md-6">
+	 <input type="number" class="form-control" placeholder="...9876543210" />
+	</div>
+	</div>
+	</div>
   </div>
+  
+  <div class="panel panel-default pan_form_con">
+    <div class="panel-heading">
+    <div class="row">
 	
+	<div class="col-md-12">
+	<h4 class=" personal_details">  Social Accounts</h4>
+	</div>
+	</div>
+	</div>
+    <div class="panel-body">	
+    <div class="row">	
+	 <div class="col-md-4">
+	
+	 <label>
+	 <i class="fa fa-facebook"></i>   Facebook :
+	 </label>
+	 <input type="text" class="form-control" />
+	</div>
+	 <div class="col-md-4">
+	 
+	 <label>
+	 <i class="fa fa-google"></i>   Google :
+	 </label>
+	 <input type="text" class="form-control" />
+	</div>
+	 <div class="col-md-4">	  
+	 <label>
+	 <i class="fa fa-twitter"></i>  Twitter :
+	 </label>
+	 <input type="text" class="form-control" />
+	</div>
+	</div>	
+    <div class="row">	
+	  <div class="col-md-4">
+	   
+	  <label>
+	 
+<i class="fa fa-linkedin"></i>  LinkedIn :
+	 </label>
+	 <input type="text" class="form-control" />
+	</div>
+	 <div class="col-md-4">  
+	  <label>
+	 <i class="fa fa-pinterest"></i>  Pinterest :
+	 </label>
+	 <input type="text" class="form-control" />
+	</div>
+	 <div class="col-md-4">	  
+	  <label>
+	 
+	 <i class="fa fa-instagram"></i>  Instagram :
+	 </label>
+	 <input type="text" class="form-control" />
+	</div>
+	</div>	
+	</div>
+	</div>
+  
+</div>
+
+                        
+						<div class="margin-bottom text-center">
+							<a href="MyProfile.html"><button type="submit" class="btn theme-btn btn-m">Submit</button></a>
+							<br/>
+						</div>
 						
+					
+</div>
 					
 					<!-- Sidebar -->
 					
@@ -307,7 +269,6 @@
 				</div>
                                 </div>
                                 
-                            </div>
                             </div>
                             
 <!--		<footer class="footer">-->
@@ -564,27 +525,6 @@
 <!--			</div>-->
 <!--		</div>   -->
 <!--		&lt;!&ndash; Apply Job Popup &ndash;&gt;-->
-<!--		&lt;!&ndash; sms Popup &ndash;&gt;-->
-<!--		<div class="modal fade" id="myModal" role="dialog">-->
-<!--    <div class="modal-dialog">-->
-<!--    -->
-<!--      &lt;!&ndash; Modal content&ndash;&gt;-->
-<!--      <div class="modal-content">-->
-<!--        <div class="modal-header">-->
-<!--          <button type="button" class="close" data-dismiss="modal">&times;</button>-->
-<!--          <h4 class="modal-title">Modal Header</h4>-->
-<!--        </div>-->
-<!--        <div class="modal-body">-->
-<!--          <p>Some text about sms in the modal.</p>-->
-<!--        </div>-->
-<!--        <div class="modal-footer">-->
-<!--          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      -->
-<!--    </div>-->
-<!--  </div>-->
-<!--		&lt;!&ndash; sms Popup &ndash;&gt;-->
 <!--		-->
 <!--		&lt;!&ndash; Sign Up Window Code &ndash;&gt;-->
 <!--		<div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">-->
@@ -637,8 +577,7 @@
 <!--								</form>-->
 <!--								-->
 <!--								<div class="log-option"><span>OR</span></div>-->
-<!--								-->
-<!--									<div class="row mrg-bot-20">-->
+<!--								<div class="row mrg-bot-20">-->
 <!--									<div class="col-md-12">-->
 <!--										<a href="#" title="" class="fb-log-btn log-btn"><i class="fa fa-facebook"></i>Sign In With Facebook</a>-->
 <!--									</div>-->
@@ -680,8 +619,7 @@
 <!--								</form>-->
 <!--								-->
 <!--								<div class="log-option"><span>OR</span></div>-->
-<!--								-->
-<!--									<div class="row mrg-bot-20">-->
+<!--								<div class="row mrg-bot-20">-->
 <!--									<div class="col-md-12">-->
 <!--										<a href="#" title="" class="fb-log-btn log-btn"><i class="fa fa-facebook"></i>Sign In With Facebook</a>-->
 <!--									</div>-->
@@ -718,43 +656,7 @@
 <!--		<script src="assets/plugins/date-dropper/datedropper.js"></script>-->
 <!--		<script src="assets/plugins/nice-select/js/jquery.nice-select.min.js"></script>-->
 <!--		<script src="assets/js/custom.js"></script>-->
-<!--	<script>-->
-<!--function sticky_relocate() {-->
-<!--			    var window_top = $(window).scrollTop() ;-->
-<!--			    var footer_top = $(".footer").offset().top - 30;-->
-<!--			    var div_top = $('#sticky-anchor').offset().top;-->
-<!--			    var div_height = $(".sidebar").height();-->
-<!--			    var leftHeight = $('.left-container').height(); -->
-<!--  -->
-<!--			    if (window_top + div_height > footer_top){-->
-<!--			        $('.sidebar').removeClass('stick');-->
-<!--			    	$('.sidebar').addClass('abs');-->
-<!--			    	 $('.right-conatainer').css('min-height', leftHeight + 'px');-->
-<!--			    	}-->
-<!--			    else if (window_top > div_top) {-->
-<!--			        $('.sidebar').addClass('stick');-->
-<!--			        $('.sidebar').removeClass('abs');-->
-<!--			    } else {-->
-<!--			        $('.sidebar').removeClass('stick');-->
-<!--			        $('.sidebar').removeClass('abs');-->
-<!--			    }-->
-<!--			}-->
-
-<!--			$(function () {-->
-<!--			    $(window).scroll(sticky_relocate);-->
-<!--			    sticky_relocate();-->
-<!--			});-->
-<!--</script>-->
-<!--		<script>-->
-<!--		$(function() {-->
-<!--			  $('.check-all').on('click', function() {-->
-<!--				$('.checkboxes input:checkbox').prop('checked', true);-->
-<!--			  });-->
-<!--			  $('.uncheck-all').on('click', function() {-->
-<!--				$('.checkboxes input:checkbox').prop('checked', false);-->
-<!--			  });-->
-<!--			});-->
-<!--		</script>-->
+<!--		-->
 <!--		<script>-->
 <!--		$('#myTab a').click(function (e) {-->
 <!--			e.preventDefault()-->
@@ -785,7 +687,8 @@
 <!--		<script>-->
 <!--			AOS.init();-->
 <!--		</script>-->
+<!--		-->
 <!--    </body>-->
 
 <!--</html>-->
-{% endblock %}
+{% endblock%}
