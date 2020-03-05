@@ -1,7 +1,8 @@
 from django.db import models
-
-
-
+class Country(models.Model):
+    country=models.CharField(max_length=50)
+    def __str__(self):
+        return self.country
 class City(models.Model):
     city=models.CharField(max_length=50)
     def __str__(self):
@@ -36,8 +37,14 @@ class Package(models.Model):
         return self.package
 
 
+class Availability_of_join(models.Model):
+    aoj = models.DateField()
+    def __str__(self):
+        return self.aoj
+
+
 class Jobseeker(models.Model):
-    user1=models.OneToOneField('auth.User',on_delete=models.CASCADE)
+    user=models.OneToOneField('auth.User',on_delete=models.CASCADE, null=True, blank=True)
     fname1=models.CharField(max_length=50)
     lname1=models.CharField(max_length=50)
     email1=models.EmailField()
@@ -58,10 +65,10 @@ class Jobseeker(models.Model):
     desired_designation=models.ForeignKey(Designation,on_delete=models.CASCADE)
     # work_experiance=models.ForeignKey(Experiance,on_delete=models.CASCADE)
     expect_package=models.CharField(max_length=50)
-    desired_shipt=models.CharField(max_length=50)
+    desired_shift=models.CharField(max_length=50)
     desire_location=models.ForeignKey(City,on_delete=models.CASCADE)
     desire_industry=models.ForeignKey(Industries,on_delete=models.CASCADE)
-    availability_jion=models.CharField(max_length=50)
+    availability_join=models.ForeignKey(Availability_of_join,on_delete=models.CASCADE)
     qualification=models.CharField(max_length=50)
     university=models.CharField(max_length=50)
     specialization=models.CharField(max_length=50)
@@ -77,10 +84,14 @@ class Jobseeker(models.Model):
     linkedin=models.URLField()
     pinterest=models.URLField()
     instagram=models.URLField()
+
     def __str__(self):
         return self.company_name
 
+
 class Createjob(models.Model):
+    user=models.OneToOneField('auth.User',on_delete=models.CASCADE, null=True, blank=True)
+
     job_title=models.CharField(max_length=50)
     designation=models.ForeignKey(Designation,on_delete=models.CASCADE)
     job_category=models.ForeignKey(Category,on_delete=models.CASCADE)
@@ -106,7 +117,7 @@ class Createjob(models.Model):
     website_link=models.URLField()
     address=models.CharField(max_length=100)
     state=models.CharField(max_length=50)
-    country=models.CharField(max_length=50)
+    country=models.ForeignKey(Country,on_delete=models.CASCADE)
     zipcode=models.IntegerField()
     company_logo=models.ImageField(upload_to='logo')
     interview_location=models.ForeignKey(City,on_delete=models.CASCADE)
