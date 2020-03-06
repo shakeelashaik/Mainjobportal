@@ -1,0 +1,111 @@
+{% extends 'layout2.html' %}
+{% block content %}
+{% load static %}
+
+
+                            <div class="full_width propery_listing">
+                                <div class="container">
+                                    <div class="row">
+					<div class="col-md-3 col-sm-3">
+					<div class="filter_sidebar filtersidebar_menu for_mob_filter">
+
+		<div class="text-center">
+		<span class="photo_edit text-center">
+		<img src="{% static 'img/noimg.jpg' %}" class="img-responsive img-circle">
+		<div class="image-upload">
+			<label for="file-input">
+				<img src="https://goo.gl/pB9rpQ"/>
+			</label>
+
+			<input id="file-input" type="file"/>
+		</div>
+		</span>
+		</div>
+			<div class="div_welcome">
+<h3>Welcome sreekanth !!</h3>
+</div>
+<ul>
+    <li class=""><a href="{% url 'emppro' %}">My Profile</a></li>
+    <li class=""><a href="{% url 'postedjobs' %}">Posted Jobs</a></li>
+    <li class=""><a href="{% url 'jobappliers' %}">Job Appliers</a></li>
+	<li class=""><a href="{% url 'bookmarkpro' %}">Bookmarked Profiles</a></li>
+    <li class=""><a href="{% url 'shortlistedprofiles' %}">Shortlisted Profiles</a></li>
+    <li class=""><a href="{% url 'conpro' %}">Contacted Profiles</a></li>
+<!--	<li class=""><a href="interested_jobs.html">Interested Jobs</a></li>-->
+<!--	<li class=""><a href="Contacted_com.html">Contacted Companies</a></li>-->
+    <li class="active"><a href="{% url 'empchangepass' %}">Change Password</a></li>
+    <li class=""><a href="#">Logout</a></li>
+</ul>
+</div>
+
+					</div>
+					<div class="col-md-9 liting_grid padding_10_right">
+<div class="prop_prop" data-aos="fade-up" data-aos-duration="500">
+ <div class="panel panel-default">
+    <div class="panel-heading">
+    <div class="row">
+
+	<div class="col-md-6">
+	<h4 class=" personal_details">CHANGE PASSWORD</h4>
+	</div>
+	<div class="col-md-6">
+	<div class="edit">
+	</div>
+	</div>
+	</div>
+	</div>
+    <div class="panel-body">
+	<form>
+    <div class="row">
+
+	 <div class="col-md-3">
+	 <div>Old Password  </div>
+	</div>
+	 <div class="col-md-6">
+	<input type="password" class="form-control" placeholder="Asdf@1234" />
+	</div>
+	</div>
+    <div class="row">
+	 <div class="col-md-3">
+	 <div>New Password  </div>
+	</div>
+	 <div class="col-md-6">
+	 <input type="password" class="form-control" placeholder="Asdf@1234" />
+
+	</div>
+	</div>
+    <div class="row">
+	 <div class="col-md-3">
+	<div> Confirm New Password </div>
+	</div>
+	 <div class="col-md-6">
+	  <input type="password" class="form-control" placeholder="Asdf@1234" />
+
+	</div>
+	</div>
+
+</form>
+	</div>
+  </div>
+
+</div>
+
+
+						<div class="margin-bottom text-center">
+							<a href="MyProfile.html"><button type="submit" class="btn theme-btn btn-m">Submit</button></a>
+							<br/>
+						</div>
+
+
+</div>
+
+					<!-- Sidebar -->
+
+
+				</div>
+                                </div>
+
+                            </div>
+
+
+{% endblock %}
