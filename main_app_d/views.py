@@ -83,9 +83,6 @@ def job_appliers(request):
 def posted_jobs(request):
     return render(request, 'posted_jobs.html')
 
-# def shortlisted_jobs(request):
-#     return render(request, 'shortlisted_jobs.html')
-
 
 def shortlisted_pro(request):
     return render(request, 'shortlisted_profiles.html')
@@ -94,8 +91,6 @@ def shortlisted_pro(request):
 def empchangepass(request):
     return render(request, 'empchangepass.html')
 
-# def sent_jobs(request):
-#     return render(request, 'sent_jobs.html')
 
 
 def emp_pro(request):
