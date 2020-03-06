@@ -9,7 +9,6 @@ urlpatterns = [
     path('applied_jobs/', views.applied_jobs, name='applied_jobs'),
     path('browse_jobseeker/', views.browse_jobseeker, name='browse_jobseeker'),
     path('interested_jobs/', views.interested_jobs, name='interested_jobs'),
-    path('job_appliers/', views.job_appliers, name='job_appliers'),
     path('changepassword/', views.changepassword, name='changepassword'),
     path('Contacted_com/', views.Contacted_com, name='Contacted_com'),
     path('shortlisted_com/', views.shortlisted_com, name='shortlisted_com'),

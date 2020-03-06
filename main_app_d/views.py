@@ -33,10 +33,6 @@ def interested_jobs(request):
     return render(request, 'interested_jobs.html')
 
 
-def job_appliers(request):
-    return render(request, 'job_appliers.html')
-
-
 def changepassword(request):
     return render(request, 'changepassword.html')
 

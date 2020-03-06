@@ -1,40 +1,67 @@
-{% extends 'job_seeker_index.html' %}
+{% extends 'layout2.html' %}
 {% block content %}
 {% load static %}
-<div class="full_width propery_listing">
+
+
+                            <div class="full_width propery_listing">
                                 <div class="container">
                                     <div class="row">
 					<div class="col-md-3 col-sm-3">
 					<div id="sticky-anchor"></div>
 					<div class="filter_sidebar filtersidebar_menu for_mob_filter sidebar">
-					
-<div class="profileimg">
-<br/>
-<img src="{% static 'img/noimg.jpg' %}" class="img-thumbnail img-responsive img-circle">
 
+<!--<div class="profileimg">-->
+<!--<br/>-->
+<!--<img src="{% static 'img/noimg.jpg' %}" class="img-thumbnail img-responsive img-circle">-->
+
+<!--</div>-->
+<!--    <div class="div_welcome">-->
+<!--<h3>Welcome saipoojitha !!</h3>-->
+<!--</div>-->
+<!--<ul>-->
+<!--   <li class=""><a href="myprofile.html">My Profile</a></li>-->
+<!--    <li class=""><a href="shortlisted_profiles.html">Shortlisted Profiles</a></li>-->
+<!--    <li class=""><a href="sent_jobs.html">Sent Jobs</a></li>-->
+<!--    <li class=""><a href="posted_jobs.html">Posted Jobs</a></li>-->
+<!--    <li class="active"><a href="applied_jobs.html">Apply Jobs (110)</a></li>-->
+<!--    <li class=""><a href="shortlisted_jobs.html">Shortlisted Jobs</a></li>-->
+<!--    <li class=""><a href="changepassword.html">Change Password</a></li>-->
+<!--    <li class=""><a href="#">Logout</a></li>-->
+<!--</ul>-->
+<!--</div>--><div class="text-center">
+<span class="photo_edit text-center">
+<img src="{% static 'img/noimg.jpg' %}" class="img-responsive img-circle">
+<div class="image-upload">
+    <label for="file-input">
+        <img src="https://goo.gl/pB9rpQ"/>
+    </label>
+
+    <input id="file-input" type="file"/>
+</div>
+</span>
 </div>
     <div class="div_welcome">
-<h3>Welcome saipoojitha !!</h3>
+<h3>Welcome sreekanth !!</h3>
 </div>
 <ul>
-   <li class="active"><a href="{% url 'jsp' %}" method="post">jobseeker Profile</a></li>
-<!--    <li class=""><a href="shortlisted_profiles.html">Shortlisted Profiles</a></li>-->
-
-<!--	<li class=""><a href="Contacted_pro.html">Contacted Profiles</a></li>-->
-   <li class=""><a href="{% url 'applied_jobs' %}">Applied Jobs (110)</a></li>
-	<li class=""><a href="{% url 'interested_jobs' %}">Interested Jobs</a></li>
-<!--    <li class=""><a href="shortlisted_com.html">Shortlisted Companies</a></li>-->
-<!--	 <li class=""><a href="Contacted_com.html">Contacted Companies</a></li>&ndash;&gt;-->
-    <li class=""><a href="changepassword.html">Change Password</a></li>
+    <li class=""><a href="{% url 'emppro' %}">My Profile</a></li>
+    <li class=""><a href="{% url 'postedjobs' %}">Posted Jobs</a></li>
+    <li class="active"><a href="{% url 'jobappliers' %}">Job Appliers</a></li>
+	<li class=""><a href="{% url 'bookmarkpro' %}">Bookmarked Profiles</a></li>
+    <li class=""><a href="{% url 'shortlistedprofiles' %}">Shortlisted Profiles</a></li>
+    <li class=""><a href="{% url 'conpro' %}">Contacted Profiles</a></li>
+<!--	<li class=""><a href="interested_jobs.html">Interested Jobs</a></li>-->
+<!--	<li class=""><a href="Contacted_com.html">Contacted Companies</a></li>-->
+    <li class=""><a href="{% url 'empchangepass' %}">Change Password</a></li>
     <li class=""><a href="#">Logout</a></li>
 </ul>
 </div>
-						
+
 					</div>
 					<div class="col-md-9 liting_grid padding_10_right">
 	 <div class="panel panel-default">
      <div class="panel-heading" style="margin-bottom:10px;"><h4>Applied Profiles</h4></div>
-	
+
   <table id="example1" class="display nowrap" style="width:100%">
         <thead>
             <tr>
@@ -47,44 +74,45 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td width="10%" style="padding-left: 15px;">1.</td>
+            <tr role="row" class="odd">
+                <td width="10%" style="padding-left: 15px;" class="sorting_1">1.</td>
                 <td width="30%" style="padding-left: 15px;">Poojitha</td>
                 <td width="30%" style="padding-left: 15px;">UI Developer</td>
                 <td width="10%" style="padding-left: 15px;">2 years</td>
 				 <td width="10%" style="padding-left: 15px;">Accept</td>
-                <td width="10%" style="padding-left: 15px;"><a class="view_btn_dash" href="profile.html">View</a></td>
+                <td width="10%" style="padding-left: 15px;"><a class="view_btn_dash" href="{% url 'applier_profile' %}">View</a></td>
             </tr>
-			 <tr>
-                <td width="10%" style="padding-left: 15px;">1.</td>
+			 <tr role="row" class="even">
+                <td width="10%" style="padding-left: 15px;" class="sorting_1">1.</td>
                 <td width="30%" style="padding-left: 15px;">Poojitha</td>
                 <td width="30%" style="padding-left: 15px;">UI Developer</td>
                 <td width="10%" style="padding-left: 15px;">2 years</td>
 				 <td width="10%" style="padding-left: 15px;">Accept</td>
-                <td width="10%" style="padding-left: 15px;"><a class="view_btn_dash" href="profile.html">View</a></td>
+                <td width="10%" style="padding-left: 15px;"><a class="view_btn_dash" href="{% url 'applier_profile' %}">View</a></td>
             </tr>
-			 <tr>
-                <td width="10%" style="padding-left: 15px;">1.</td>
+			 <tr role="row" class="odd">
+                <td width="10%" style="padding-left: 15px;" class="sorting_1">1.</td>
                 <td width="30%" style="padding-left: 15px;">Poojitha</td>
                 <td width="30%" style="padding-left: 15px;">UI Developer</td>
                 <td width="10%" style="padding-left: 15px;">2 years</td>
 				 <td width="10%" style="padding-left: 15px;">Accept</td>
-                <td width="10%" style="padding-left: 15px;"><a class="view_btn_dash" href="profile.html">View</a></td>
+                <td width="10%" style="padding-left: 15px;"><a class="view_btn_dash" href="{% url 'applier_profile' %}">View</a></td>
             </tr>
-			
-            
+
+
         </tbody>
     </table>
-	
-		</div>				
-					
+
+		</div>
+
 					<!-- Sidebar -->
-					
-					
+
+
 				</div>
                                 </div>
-                                
+
                             </div>
                             </div>
-                            
-		{% endblock %}
+
+
+{% endblock %}
